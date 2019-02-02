@@ -18,9 +18,9 @@ and user's IP address through to the origin host.
 ### Google Cloud Functions
 
 Options to set when deploying to google cloud
-**Memory Allocated:** between 256MB - 512MB recommended
-**Runtime:** NodeJS 8+ _(Sharp doesn't build on Node 6 default)_
-**Function to Execute:** `bandwidthHeroProxy`
+- **Memory Allocated:** between 256MB - 512MB recommended
+- **Runtime:** NodeJS 8+ _(Sharp doesn't build on Node 6 default)_
+- **Function to Execute:** `bandwidthHeroProxy`
 
 
 ## Development
