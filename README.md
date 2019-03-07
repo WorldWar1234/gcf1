@@ -22,6 +22,9 @@ Options to set when deploying to google cloud
 - **Runtime:** NodeJS 8+ _(Sharp doesn't build on Node 6 default)_
 - **Function to Execute:** `bandwidthHeroProxy`
 
+ENVIRONMENT_VARIABLES
+`MIN_COMPRESS_LENGTH=2048` (minimum byte length for an image to be compressible; default 2048 ~2kB)
+
 
 ## Development
 `node ./express-wrapper.js`
