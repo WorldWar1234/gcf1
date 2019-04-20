@@ -9,7 +9,8 @@ const proxy = require('./src/proxy')
 exports.bandwidthHeroProxy = (req, res) => {
     
     authenticate(req, res, function(){});
-    params(req, res, function(){});
-    proxy(req, res, function(){});
-    
+    if(!res.headersSent){
+        params(req, res, function(){});
+        proxy(req, res, function(){});
+    }
 };
