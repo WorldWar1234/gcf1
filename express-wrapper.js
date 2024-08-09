@@ -1,6 +1,6 @@
-var express = require('express');
-var app = express();
-var bandwidthHeroProxy = require('./index.js').bandwidthHeroProxy;
+const express = require('express');
+const app = express();
+const bandwidthHeroProxy = require('./index.js').bandwidthHeroProxy;
 
 app.use('/bandwidth-hero', bandwidthHeroProxy);
 
