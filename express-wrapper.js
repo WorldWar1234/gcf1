@@ -14,6 +14,6 @@ app.get('/test', function(req,res){
     return;
 });
 
-app.listen(3000, function() {
+app.listen(10000, function() {
     console.log('Listening...');
 });
