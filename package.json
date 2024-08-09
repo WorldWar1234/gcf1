@@ -7,7 +7,7 @@
   "author": "Anatoliy Yastreb",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "node express-wrapper.js"
   },
   "dependencies": {
     "basic-auth": "^2.0.0",
