@@ -1,19 +1,13 @@
-const express = require('express');
-const app = express();
-const bandwidthHeroProxy = require('./index.js').bandwidthHeroProxy;
+#!/usr/bin/env node
+'use strict';
+const app = require('express')();
+const authenticate = require('./src/authenticate');
+const params = require('./src/params');
+const proxy = require('./src/proxy');
 
-app.use('/bandwidth-hero', bandwidthHeroProxy);
+const PORT = process.env.PORT || 8080;
 
-// app.post('/test', function(req,res){
-//     res.send('Hello World!');
-//     return;
-// });
-
-app.get('/test', function(req,res){
-    res.send('Hello World!');
-    return;
-});
-
-app.listen(10000, function() {
-    console.log('Listening...');
-});
+app.enable('trust proxy');
+app.get('/', authenticate, params, proxy);
+app.get('/favicon.ico', (req, res) => res.status(204).end());
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
